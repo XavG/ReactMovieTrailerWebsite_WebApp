@@ -1,0 +1,185 @@
+export default function(){
+    return[
+        {
+            id: 1,
+            title: 'La La Land',
+            genre: ['Musical'],
+            release_date: 20170125,
+            director: 'Damien Chazelle',
+            cast: 'Ryan Gosling, Emma Stone, John Legend',
+            image: 'http://bit.ly/2k5K6qr',
+            upload_date: 20170125,
+            uploader: 'Bob',
+            trailer_link: 'https://www.youtube.com/watch?v=0pdqf4P9MB8'
+        },
+        {
+            id: 2,
+            title: 'Star Wars : Rogue One',
+            genre: ['Action ', 'Adventure ', 'Science Fiction '],
+            release_date: 20161214,
+            director: 'Gareth Edwards',
+            cast: 'Felicity Jones, Diego Luna, Ben Mendelsohn',
+            image: 'http://bit.ly/2fuHGj2',
+            upload_date: 20161214,
+            uploader: 'Bob',
+            trailer_link: 'https://www.youtube.com/watch?v=frdj1zb9sMY'
+        },
+        {
+            id: 3,
+            title: 'Assassin\'s Creed',
+            genre: ['Action', 'Science Fiction'],
+            release_date: 20161221,
+            director: 'Justin Kurzel',
+            cast: 'Michael Fassbender, Marion Cotillard, Jeremy Irons',
+            image: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Assassin\'s_Creed_film_poster.jpg',
+            upload_date: 20161221,
+            uploader: 'Bob',
+            trailer_link: 'https://www.youtube.com/watch?v=4haJD6W136c'
+        },
+        {
+            id: 4,
+            title: 'Fantastic Beasts and Where to Find Them',
+            genre: ['Adventure', 'Science Fiction'],
+            release_date: 20161116,
+            director: 'David Yates',
+            cast: 'Eddie Redmayne, Katherine Waterston, Dan Fogler',
+            image: 'http://bit.ly/2gV5Sel',
+            upload_date: 20161116,
+            uploader: 'Jack',
+            trailer_link: 'https://www.youtube.com/watch?v=ViuDsy7yb8M'
+        },
+        {
+            id: 5,
+            title: 'Manchester by the Sea',
+            genre: ['Drama'],
+            release_date: 20161214,
+            director: 'Kenneth Lonergan',
+            cast: 'Casey Affleck, Michelle Williams, Kyle Chandler',
+            image: 'http://bit.ly/2jaBc73',
+            upload_date: 20161216,
+            uploader: 'Jack',
+            trailer_link: 'https://www.youtube.com/watch?v=NxQmuJnrjxg'
+        },
+        {
+            id: 6,
+            title: 'Captain America: Civil War',
+            genre: ['Action', 'Adventure', 'Science Fiction'],
+            release_date: 20160427,
+            director: 'Anthony Russo, Joe Russo',
+            cast: 'Chris Evans, Robert Downey Jr., Scarlett Johansson',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            upload_date: 20160510,
+            uploader: 'Jack',
+            trailer_link: 'https://www.youtube.com/watch?v=dKrVegVI0Us'
+        },
+        {
+            id: 7,
+            title: 'Money Monster',
+            genre: ['Drama', 'Crime'],
+            release_date: 20160512,
+            director: 'Jodie Foster',
+            cast: 'George Clooney, Julia Roberts, Jack O\'Connell',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTgzMjU1NDUwMl5BMl5BanBnXkFtZTgwODg1NjY0ODE@._V1_SY1000_SX675_AL_.jpg',
+            upload_date: 20160519,
+            uploader: 'Joe',
+            trailer_link: 'https://www.youtube.com/watch?v=va-0o_xBVnU'
+        },
+        {
+            id: 8,
+            title: 'Suicide Squad',
+            genre: ['Action', 'Adventure'],
+            release_date: 20160803,
+            director: 'David Ayer',
+            cast: 'Will Smith, Jared Leto, Margot Robbie',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            upload_date: 20160901,
+            uploader: 'Joe',
+            trailer_link: 'https://www.youtube.com/watch?v=0myB9YZIzeI'
+        },
+        {
+            id: 9,
+            title: 'Trolls',
+            genre: ['Adventure', 'Comedy'],
+            release_date: 20161019,
+            director: 'Walt Dohrn',
+            cast: 'Anna Kendrick, Justin Timberlake, Zooey Deschanel',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxNDc3OTcxMV5BMl5BanBnXkFtZTgwODk2NjAzOTE@._V1_SY1000_CR0,0,673,1000_AL_.jpg',
+            upload_date: 20161025,
+            uploader: 'Joe',
+            trailer_link: 'https://www.youtube.com/watch?v=xyjm5VQ11TQ'
+        },
+        {
+            id: 10,
+            title: 'Moonlight',
+            genre: ['Drama'],
+            release_date: 20160201,
+            director: 'Barry Jenkins',
+            cast: 'Mahershala Ali, Shariff Earp, Duan Sanderson',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+            upload_date: 20160202,
+            uploader: 'Tom',
+            trailer_link: 'https://www.youtube.com/watch?v=9NJj12tJzqc'
+        },
+        {
+            id: 11,
+            title: 'xXx : Reactivated',
+            genre: ['Action', 'Adventure'],
+            release_date: 20170118,
+            director: 'D.J. Caruso',
+            cast: 'Vin Diesel, Donnie Yen, Deepika Padukone',
+            image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMzcwMjkxMzQ3NV5BMl5BanBnXkFtZTgwMzgyNDA5MDI@._V1_SY1000_CR0,0,640,1000_AL_.jpg',
+            upload_date: 20170120,
+            uploader: 'Tom',
+            trailer_link: 'https://www.youtube.com/watch?v=PCijCiTcnpo'
+        },
+        {
+            id: 12,
+            title: 'Ouija',
+            genre: ['Horror'],
+            release_date: 20161021,
+            director: 'Mike Flanagan',
+            cast: 'Elizabeth Reaser, Annalise Basso, Henry Thomas',
+            image: 'http://is1.mzstatic.com/image/thumb/Video111/v4/af/86/74/af8674bd-79fc-29cd-ae32-32f109522470/source/227x227bb.jpg',
+            upload_date: 20161121,
+            uploader: 'Tom',
+            trailer_link: 'https://www.youtube.com/watch?v=MJIcZGEjjwo'
+        },
+        {
+            id: 13,
+            title: 'The Magnificent Seven',
+            genre: ['Western'],
+            release_date: 20160928,
+            director: 'Antoine Fuqua',
+            cast: 'Denzel Washington, Chris Pratt',
+            image: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Magnificent_Seven_2016.jpg',
+            upload_date: 20161008,
+            uploader: 'Edd',
+            trailer_link: 'https://www.youtube.com/watch?v=q-RBA0xoaWU'
+        },
+        {
+            id: 14,
+            title: 'Triple 9',
+            genre: ['Crime'],
+            release_date: 20160316,
+            director: 'John Hillcoat',
+            cast: 'Casey Affleck, Kate Winslet, Norman Reedus, Chiwetel, Ejiofor',
+            image: 'http://static.cinebel.be/img/movie/poster/full/1012817_fr_triple_nine_1454428219071.jpg',
+            upload_date: 20130317,
+            uploader: 'Edd',
+            trailer_link: 'https://www.youtube.com/watch?v=wzyFNVbWPxI'
+        },
+        {
+            id: 15,
+            title: 'The Birth of a Nation',
+            genre: ['Historical'],
+            release_date: 20161007,
+            director: 'Nate Parker',
+            cast: 'Nate Parker, Gabrielle Union, Aja Naomi King',
+            image: 'https://upload.wikimedia.org/wikipedia/en/c/cd/The_Birth_of_a_Nation_(2016_film).png',
+            upload_date: 20161010,
+            uploader: 'Edd',
+            trailer_link: 'https://www.youtube.com/watch?v=i18z1EQCoyg'
+        }
+    ]
+
+}
