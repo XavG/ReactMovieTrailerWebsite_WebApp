@@ -8,7 +8,7 @@ export default function(){
         {name: 'Historical'},
         {name: 'Horror'},
         {name: 'Musical'},
-        {name: 'Science Fiction'},
+        {name: 'SciFi'},
         {name: 'War'},
         {name: 'Western'},
         {name: 'Other'}

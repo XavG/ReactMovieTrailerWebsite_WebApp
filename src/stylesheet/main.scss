@@ -1,0 +1,31 @@
+$primary: #FFED3D;
+$secondary: #F12828;
+$xxx: #B21E8D;
+
+h1, h2, h3, h4 {
+  color: black;
+}
+
+.center{
+  text-align: center;
+}
+
+.imgThumbnail{
+  width: 91px;
+  height: 134px;
+}
+
+.imgTContainer{
+  min-width: 150px;
+  max-height:170px;
+}
+
+.infoContainer{
+  min-width: 400px;
+  max-height:170px;
+}
+
+.trailerContainer{
+  min-width: 700px;
+  max-width: 700px;
+}

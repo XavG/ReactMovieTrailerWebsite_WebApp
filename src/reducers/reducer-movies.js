@@ -1,6 +1,18 @@
 export default function(){
     return[
         {
+            id: 0,
+            title: 'Sample Movie',
+            genre: ['Other'],
+            release_date: 20180101,
+            director: 'Me',
+            cast: 'Me',
+            image: 'http://bit.ly/2jQwgaA',
+            upload_date: 20180100,
+            uploader: 'Mark',
+            trailer_link: 'https://www.youtube.com/watch?v=4F4qzPbcFiA'
+        },
+        {
             id: 1,
             title: 'La La Land',
             genre: ['Musical'],
@@ -15,7 +27,7 @@ export default function(){
         {
             id: 2,
             title: 'Star Wars : Rogue One',
-            genre: ['Action ', 'Adventure ', 'Science Fiction '],
+            genre: ['Action ', 'Adventure ', 'SciFi'],
             release_date: 20161214,
             director: 'Gareth Edwards',
             cast: 'Felicity Jones, Diego Luna, Ben Mendelsohn',
@@ -27,7 +39,7 @@ export default function(){
         {
             id: 3,
             title: 'Assassin\'s Creed',
-            genre: ['Action', 'Science Fiction'],
+            genre: ['Action', 'SciFi'],
             release_date: 20161221,
             director: 'Justin Kurzel',
             cast: 'Michael Fassbender, Marion Cotillard, Jeremy Irons',
@@ -39,7 +51,7 @@ export default function(){
         {
             id: 4,
             title: 'Fantastic Beasts and Where to Find Them',
-            genre: ['Adventure', 'Science Fiction'],
+            genre: ['Adventure', 'SciFi'],
             release_date: 20161116,
             director: 'David Yates',
             cast: 'Eddie Redmayne, Katherine Waterston, Dan Fogler',
@@ -63,7 +75,7 @@ export default function(){
         {
             id: 6,
             title: 'Captain America: Civil War',
-            genre: ['Action', 'Adventure', 'Science Fiction'],
+            genre: ['Action', 'Adventure', 'SciFi'],
             release_date: 20160427,
             director: 'Anthony Russo, Joe Russo',
             cast: 'Chris Evans, Robert Downey Jr., Scarlett Johansson',
@@ -82,7 +94,7 @@ export default function(){
             image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTgzMjU1NDUwMl5BMl5BanBnXkFtZTgwODg1NjY0ODE@._V1_SY1000_SX675_AL_.jpg',
             upload_date: 20160519,
             uploader: 'Joe',
-            trailer_link: 'https://www.youtube.com/watch?v=va-0o_xBVnU'
+            trailer_link: 'https://www.youtube.com/watch?v=qr_nGAbFkmk'
         },
         {
             id: 8,
@@ -179,7 +191,68 @@ export default function(){
             upload_date: 20161010,
             uploader: 'Edd',
             trailer_link: 'https://www.youtube.com/watch?v=i18z1EQCoyg'
+        },
+        {
+            id: 16,
+            title: 'Sully',
+            genre: ['Drama'],
+            release_date: 20161030,
+            director: 'Clint Eastwood',
+            cast: 'Tom Hanks, Aaron Eckhart, Laura Linney',
+            image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcTqUGsZYAntdp3mpygYNbnB9AX3GKwI4_4LQjrSX82GsTQxcBwv',
+            upload_date: 20161105,
+            uploader: 'Sam',
+            trailer_link: 'https://www.youtube.com/watch?v=mjKEXxO2KNE'
+        },
+        {
+            id: 17,
+            title: 'Deadpool',
+            genre: ['Action'],
+            release_date: 20160210,
+            director: 'Tim Miller',
+            cast: 'Ryan Reynolds, Morrena Baccarin',
+            image: 'http://t2.gstatic.com/images?q=tbn:ANd9GcT_GDz-2Xb-Z8XubX6Q_SXlNnS_KRQ78cfTlpQCI6DtH_bEtjwd',
+            upload_date: 20160214,
+            uploader: 'Sam',
+            trailer_link: 'https://www.youtube.com/watch?v=9vN6DHB6bJc'
+        },
+        {
+            id: 18,
+            title: 'Zootopia',
+            genre: ['Action'],
+            release_date: 20160217,
+            director: 'Byron Howard',
+            cast: 'Jason Bateman, Ginnifer Goodwin',
+            image: 'https://lh3.googleusercontent.com/qlxBnASxAN35_JMRPT94NZA37BgpvxveC1WzjUjFigPMN3WNqAaYKF9FY8KRJpbIl9c=w300',
+            upload_date: 20161010,
+            uploader: 'Sam',
+            trailer_link: 'https://www.youtube.com/watch?v=bY73vFGhSVk'
+        },
+        {
+            id: 19,
+            title: 'Sausage Party',
+            genre: ['Adventure'],
+            release_date: 2160914,
+            director: 'Conrad Vernon',
+            cast: 'Seth Rogen, Jonah Hill, Kristen Wiig',
+            image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSpbBTxHG6X59tPV520ZzmkWVt4wyMfeJOjbllri-DKTG-RwDNR',
+            upload_date: 20160930,
+            uploader: 'Sam',
+            trailer_link: 'https://www.youtube.com/watch?v=9VoNgLnjzVg'
+        },
+        {
+            id: 20,
+            title: 'Jason Bourne',
+            genre: ['Action '],
+            release_date: 20160810,
+            director: 'Paul Greengrass',
+            cast: 'Matt Damon, Alicia Vikander, Tommy Lee Jones',
+            image: 'http://fr.web.img4.acsta.net/pictures/16/06/21/09/42/573260.jpg',
+            upload_date: 20160815,
+            uploader: 'Sam',
+            trailer_link: 'https://www.youtube.com/watch?v=F4gJsKZvqE4'
         }
+
     ]
 
 }

@@ -7,15 +7,20 @@ import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
 import {selectCategory} from '../../action/selectCategory.js';
 import {selectMovie} from '../../action/selectMovie.js';
+import {Card, Image} from 'semantic-ui-react';
 
 class Home extends Component{
 
     categoryList() {
         return this.props.categories.map((category) => {
-            return(
-                <li key={category.name} onClick={() => this.props.selectCategory(category)}>
-                    <Link to="/category">{category.name}</Link>
-                </li>
+            return (
+            <Link to="/category" key={category.name}>
+                <Card onClick={() => this.props.selectCategory(category)} className="ui centered card">
+                    <Card.Description>
+                        {category.name}
+                    </Card.Description>
+                </Card>
+            </Link>
             );
         });
     }
@@ -23,16 +28,22 @@ class Home extends Component{
     latestMovies() {
         var numLatestMovies = 4;
         var ordered = [];
-        for (var i=0;  i < this.props.movies.length;i++) {
+        for (var i = 0; i < this.props.movies.length; i++) {
             ordered.push(this.props.movies[i]);
         }
-        ordered.sort(function(a, b) {return b.upload_date - a.upload_date});
-        var topFour = ordered.slice(0,numLatestMovies);
+        ordered.sort(function (a, b) {
+            return b.upload_date - a.upload_date
+        });
+        var topFour = ordered.slice(0, numLatestMovies);
         return topFour.map((movie) => {
-            return(
-                <li key={movie.id} onClick={() => this.props.selectMovie(movie)}>
-                    <Link to="/movieInfo">{movie.title} > {movie.upload_date}</Link>
-                </li>
+            return (
+            <Link to="/movieInfo" key={movie.id}>
+                <Card onClick={() => this.props.selectMovie(movie)} className="ui centered card">
+                    <Card.Description>
+                        {movie.title} | Upload date : {movie.upload_date}
+                    </Card.Description>
+                </Card>
+            </Link>
             );
         });
     }
@@ -48,9 +59,13 @@ class Home extends Component{
             return 0;});
         return alphaOrder.map((movie) => {
             return(
-                <li key={movie.id} onClick={() => this.props.selectMovie(movie)}>
-                    <Link to="/movieInfo">{movie.title}</Link>
-                </li>
+                <Link to="/movieInfo" key={movie.id}>
+                    <Card onClick={() => this.props.selectMovie(movie)} className="ui centered card">
+                        <Card.Description>
+                            {movie.title}
+                        </Card.Description>
+                    </Card>
+                </Link>
             );
         });
     }
@@ -59,13 +74,17 @@ class Home extends Component{
         return(
             <div>
                 <Header />
-                <HomeScene name={"HOME"}/>
-                <h2>GENRES</h2>
-                <div>{this.categoryList()}</div>
-                <h2>LATEST MOVIES</h2>
-                <div>{this.latestMovies()}</div>
-                <Link to="/allMovies"><h2>ALL MOVIES</h2></Link>
-                <div>{this.movieList()}</div>
+                <HomeScene name={"Home"}/>
+
+                <h3 className="center">Categories</h3>
+                <div className="center">{this.categoryList()}</div>
+
+                <h3 className="center">Latest Movies</h3>
+                <div className="center">{this.latestMovies()}</div>
+
+                <h3 className="center">All Movies</h3>
+                <div className="center">{this.movieList()}</div>
+
                 <Footer />
             </div>
         );
