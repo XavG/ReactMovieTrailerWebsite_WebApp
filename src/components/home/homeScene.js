@@ -4,7 +4,10 @@ import {Card} from 'semantic-ui-react';
 
 const HomeScene = (props) => (
     <div className="center">
-        <h1>{props.name}</h1>
+        <br/>
+        <h1>Welcome to WatchMeNow.com</h1>
+        <h5>Here you will be able to browse and watch the latest movie trailers. Only here: WatchMeNow.com</h5>
+        <br/><br/>
     </div>
 );
 

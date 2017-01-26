@@ -1,11 +1,17 @@
-$primary: #FFED3D;
-$secondary: #F12828;
-$xxx: #B21E8D;
+$backColor: whitesmoke;
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: black;
 }
 
+body {
+  background-color: $backColor;
+}
+
+.homeLogo {
+  width: 50px;
+  height: 50px;
+}
 .center{
   text-align: center;
 }
@@ -28,4 +34,35 @@ h1, h2, h3, h4 {
 .trailerContainer{
   min-width: 700px;
   max-width: 700px;
+}
+
+.loginContainer{
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.homeCatBtt{
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.homeMovieBtt{
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.listMovieBtt{
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.imgTHomeContainer{
+  min-width: 230px;
+  max-width: 230px;
+  max-height:170px;
+}
+
+.imgHomeThumbnail{
+  width: 136px;
+  height: 201px;
 }

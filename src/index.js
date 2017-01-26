@@ -12,7 +12,8 @@ import Login from '../src/components/login/loginContainer.js';
 import AddMovie from '../src/components/addMovie/addMovieContainer.js';
 import AllMovies from '../src/components/allMovies/allMoviesContainer.js';
 import EditMovie from '../src/components/movieEdit/movieEditContainer.js';
-import NotFound from '../src/components/404/404Container.js'
+import NotFound from '../src/components/404/404Container.js';
+import SignUp from '../src/components/signup/signupContainer.js';
 import './stylesheet/main.scss'
 
 const store = createStore(allReducers);
@@ -27,6 +28,7 @@ ReactDOM.render(
             <Route path="/addMovie" component={AddMovie} />
             <Route path="/allMovies" component={AllMovies} />
             <Route path="/editMovie" component={EditMovie} />
+            <Route path="/signUp" component={SignUp} />
             <Route path="*" component={NotFound} />
         </Router>
     </Provider>

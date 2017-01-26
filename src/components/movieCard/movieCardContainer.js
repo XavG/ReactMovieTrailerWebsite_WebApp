@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
 import {Link} from 'react-router';
-import { Grid, Segment } from 'semantic-ui-react'
+import {Grid, Segment} from 'semantic-ui-react';
 
 class MovieCard extends Component {
 

@@ -5,7 +5,7 @@ import Footer from '../footer/footerContainer';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {selectMovie} from '../../action/selectMovie.js';
-import {Card} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class Category extends Component {
 
@@ -22,16 +22,14 @@ class Category extends Component {
             return 0;});
         return catMovies.map((movie) => {
             return(
-                <Link to="/movieInfo" key={movie.id}>
-                    <Card onClick={() => this.props.selectMovie(movie)}>
-                        <Card.Description>
-                            {movie.title}
-                        </Card.Description>
-                    </Card>
+                <Link to="/movieInfo" key={movie.id} onClick={() => this.props.selectMovie(movie)}>
+                    <Button className="listMovieBtt" color="blue">
+                        <h5>{movie.title}</h5>
+                    </Button>
+                    <br/>
                 </Link>
             );
         });
-        console.log(catMovies)
     }
 
     render() {
@@ -46,8 +44,12 @@ class Category extends Component {
 
             <div>
                 <Header />
-                <h2>Genre : {this.props.activeCategory.name}</h2>
-                <div>{this.getCatMovies()}</div>
+                    <div className="center">
+                        <br/>
+                        <h2>Category : {this.props.activeCategory.name}</h2>
+                        <br/>
+                        <div>{this.getCatMovies()}</div>
+                    </div>
                 <Footer />
             </div>
         );

@@ -3,25 +3,17 @@ import {connect} from 'react-redux';
 import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
 import {Grid, Segment, Form, Button} from 'semantic-ui-react';
+import {hashHistory} from 'react-router';
 import {Link} from 'react-router';
 
-class Login extends Component {
+class SignUp extends Component {
 
     loginCheck(){
         event.preventDefault();
         if (!this.inputsCheck()) {
-            console.log("Error : Missing username or password");
+            console.log("Error : Cannot sign up user.");
         } else {
-            this.props.users.map((user) => {
-               if (this.refs.username.value == user.username) {
-                   if (this.refs.password.value == user.password) {
-                       console.log('Logged in');
-                       hashHistory.push('/');
-                   } else {
-                       console.log('Error : Wrong password')
-                   }
-               }
-            })
+            console.log("Signed up!");
         }
 
     }
@@ -54,9 +46,9 @@ class Login extends Component {
         return(
             <Grid centered>
                 <Grid.Row>
-                    <Grid.Column className="loginContainer" >
-                        <Segment className="center" >
-                            <h4>Log-in your account</h4>
+                    <Grid.Column className="loginContainer">
+                        <Segment className="center">
+                            <h4>Sign up to WachMeNow.com</h4>
                             <Form onSubmit={this.loginCheck.bind(this)}>
                                 <Form.Field>
                                     <input name="username" placeholder='Username' ref="username"/>
@@ -64,8 +56,11 @@ class Login extends Component {
                                 <Form.Field>
                                     <input name="password" type="password" placeholder='Password' ref="password"/>
                                 </Form.Field>
-                                <Button type='submit'>Login</Button>
-                                <Link to="/signUp"><Button>Sign Up</Button></Link>
+                                <Form.Field>
+                                    <input name="confirm" type="password" placeholder='Confirm Password' ref="confirm"/>
+                                </Form.Field>
+                                <Link to="/login"><Button type='submit'>Cancel</Button></Link>
+                                <Button type='submit'>Sign Up</Button>
                             </Form>
                         </Segment>
                     </Grid.Column>
@@ -94,4 +89,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(SignUp);

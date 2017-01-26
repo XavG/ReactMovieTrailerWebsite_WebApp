@@ -6,7 +6,7 @@ import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
 import {selectCategory} from '../../action/selectCategory.js';
 import {selectMovie} from '../../action/selectMovie.js';
-import {Card} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 
 class AllMovies extends Component{
 
@@ -30,9 +30,11 @@ class AllMovies extends Component{
                 } else if (dropDownFilter == 'uploadDate') {
                     return movie.upload_date.toString().startsWith(this.state.query);
                 } else if (dropDownFilter == 'uploader') {
-                    return movie.uploader.toLowerCase().startsWith(this.state.query.toLocaleLowerCase());
+                    return movie.uploader.toLowerCase().indexOf(this.state.query.toLocaleLowerCase())!== -1;
                 } else if (dropDownFilter == 'director') {
-                    return movie.director.toLowerCase().startsWith(this.state.query.toLocaleLowerCase());
+                    return movie.director.toLowerCase().indexOf(this.state.query.toLocaleLowerCase())!== -1;
+                } else if (dropDownFilter == 'cast') {
+                    return movie.cast.toLowerCase().indexOf(this.state.query.toLocaleLowerCase())!== -1;
                 }
             }
         );
@@ -46,16 +48,21 @@ class AllMovies extends Component{
             return 0;});
         return alphaOrder.map((movie) => {
             return(
-                <Link to="/movieInfo" key={movie.id}>
-                    <Card onClick={() => this.props.selectMovie(movie)}>
-                        <Card.Description>
-                            {movie.title}
-                        </Card.Description>
-                    </Card>
+                <Link to="/movieInfo" key={movie.id} onClick={() => this.props.selectMovie(movie)}>
+                    <Button className="listMovieBtt" color={this.getRandomColor()}>
+                        <h5>{movie.title} by {movie.director}</h5>
+                    </Button>
+                    <br/>
                 </Link>
             );
         });
     }
+
+    getRandomColor() {
+        var colors = ['blue', 'pink', 'orange', 'red', 'purple', 'brown', 'grey', 'violet', 'teal', 'green', 'olive', 'yellow']
+        return (colors[Math.floor(Math.random()*colors.length)])
+    }
+
 
     updateQuery(event) {
         this.setState({query : event.target.value});
@@ -73,6 +80,8 @@ class AllMovies extends Component{
             this.setState({queryPlaceholder : "Search by Uploader..."});
         } else if (event.target.value == 'director') {
             this.setState({queryPlaceholder : "Search by Director..."});
+        } else if (event.target.value == 'cast') {
+            this.setState({queryPlaceholder : "Search by Cast..."});
         }
     }
 
@@ -80,23 +89,28 @@ class AllMovies extends Component{
         return(
             <div>
                 <Header />
+                <div className="center">
+                    <br/>
+                    <h1>All Movies</h1>
+                    <br/>
 
-                <h2>All Movies</h2>
+                    <input type="text"
+                           size="50"
+                           value={this.state.query}
+                           onChange={this.updateQuery.bind(this)}
+                           placeholder={this.state.queryPlaceholder}/>
 
-                <input type="text"
-                       value={this.state.query}
-                       onChange={this.updateQuery.bind(this)}
-                       placeholder={this.state.queryPlaceholder}/>
-
-                <select onChange={this.updateQueryFilter.bind(this)}>
-                    <option value="title">Title</option>
-                    <option value="releaseDate">Release Date</option>
-                    <option value="director">Director</option>
-                    <option value="uploadDate">Upload Date</option>
-                    <option value="uploader">Uploader</option>
-                </select>
-
-                <div>{this.movieList()}</div>
+                    <select onChange={this.updateQueryFilter.bind(this)}>
+                        <option value="title">Title</option>
+                        <option value="releaseDate">Release Date</option>
+                        <option value="director">Director</option>
+                        <option value="cast">Cast</option>
+                        <option value="uploadDate">Upload Date</option>
+                        <option value="uploader">Uploader</option>
+                    </select>
+                </div>
+                <br/>
+                <div className="center">{this.movieList()}</div>
 
                 <Footer />
             </div>

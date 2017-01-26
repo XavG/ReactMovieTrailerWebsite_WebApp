@@ -50,7 +50,7 @@ export default function(){
         },
         {
             id: 4,
-            title: 'Fantastic Beasts and Where to Find Them',
+            title: 'Fantastic Beasts',
             genre: ['Adventure', 'SciFi'],
             release_date: 20161116,
             director: 'David Yates',
@@ -77,7 +77,7 @@ export default function(){
             title: 'Captain America: Civil War',
             genre: ['Action', 'Adventure', 'SciFi'],
             release_date: 20160427,
-            director: 'Anthony Russo, Joe Russo',
+            director: 'Anthony Russo',
             cast: 'Chris Evans, Robert Downey Jr., Scarlett Johansson',
             image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
             upload_date: 20160510,
