@@ -3,10 +3,60 @@ import {connect} from 'react-redux';
 import ReactPlayer from 'react-player';
 import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
-import {Link} from 'react-router';
-import {Grid, Segment} from 'semantic-ui-react';
+import {Link, hashHistory} from 'react-router';
+import {Grid, Segment, Button} from 'semantic-ui-react';
 
 class MovieCard extends Component {
+
+    editCheckToken() {
+        return fetch('http://localhost:8080/api/checkToken ', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function(res){ res.json().then(function(rez) {
+                if (rez.message == "USER_TOKEN_INVALIDITY") {
+                    console.log("Token error : ");
+                    console.log(rez.message);
+                } else {
+                    console.log(rez.message);
+                    console.log("Go to edit, logged in.");
+                    hashHistory.push('/editMovie');
+                }
+            })})
+
+            .catch(function(res){
+                console.log("Cannot edit, error :");
+                console.log(res);
+            })
+    }
+
+    deleteCheckToken() {
+        return fetch('http://localhost:8080/api/checkToken ', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function(res){ res.json().then(function(rez) {
+                if (rez.message == "USER_TOKEN_INVALIDITY") {
+                    console.log("Token error : ");
+                    console.log(rez.message);
+                } else {
+                    console.log(rez.message);
+                    console.log("Deleting, logged in.");
+                    hashHistory.push('/');
+                }
+            })})
+
+            .catch(function(res){
+                console.log("Cannot delete, error :");
+                console.log(res);
+            })
+    }
 
     render() {
         if (!this.props.activeMovie){
@@ -53,9 +103,9 @@ class MovieCard extends Component {
                 <br/>
 
                 <p className="center">
-                    <Link to="/editMovie">Edit Movie</Link>
+                    <Button onClick={this.editCheckToken.bind(this)}>Edit Movie</Button>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <Link to="/">Delete Movie</Link>
+                    <Button onClick={this.deleteCheckToken.bind(this)}>Delete Movie</Button>
                 </p>
 
                 <Footer />

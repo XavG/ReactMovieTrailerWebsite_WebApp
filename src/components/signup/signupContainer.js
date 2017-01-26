@@ -3,40 +3,53 @@ import {connect} from 'react-redux';
 import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
 import {Grid, Segment, Form, Button} from 'semantic-ui-react';
-import {hashHistory} from 'react-router';
-import {Link} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 
 class SignUp extends Component {
 
-    loginCheck(){
-        event.preventDefault();
+    signUpCheck(){
         if (!this.inputsCheck()) {
-            console.log("Error : Cannot sign up user.");
+            console.log("ERROR : Inputs not ok.");
+            console.log("ERROR : No username or No Password or Password != Password Confirmation.");
         } else {
-            console.log("Signed up!");
+            console.log("Sending data to server.");
+            this.pushSignUpToServer();
         }
 
+    }
+
+    pushSignUpToServer(){
+        return fetch('http://localhost:8080/api/register ', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: this.refs.username.value,
+                password: this.refs.password.value
+            })
+        })
+            .then(function(){
+                console.log("Sign up confirmed.");
+                hashHistory.push('/login');
+            })
+            .catch(function(res){
+                console.log("ERROR : ", res);
+            })
     }
 
     inputsCheck(){
-        if (this.usernameCheck() && this.passwordCheck()) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.usernameCheck() && this.passwordCheck()
     }
 
     usernameCheck() {
-        if (this.refs.username.value != '') {
-            return true;
-        } else {
-            return false;
-        }
+        return this.refs.username.value != ''
     }
 
     passwordCheck() {
         if (this.refs.password.value != '') {
-            return true;
+            return this.refs.password.value == this.refs.confirm.value
         } else {
             return false;
         }
@@ -49,7 +62,7 @@ class SignUp extends Component {
                     <Grid.Column className="loginContainer">
                         <Segment className="center">
                             <h4>Sign up to WachMeNow.com</h4>
-                            <Form onSubmit={this.loginCheck.bind(this)}>
+                            <Form>
                                 <Form.Field>
                                     <input name="username" placeholder='Username' ref="username"/>
                                 </Form.Field>
@@ -59,9 +72,9 @@ class SignUp extends Component {
                                 <Form.Field>
                                     <input name="confirm" type="password" placeholder='Confirm Password' ref="confirm"/>
                                 </Form.Field>
-                                <Link to="/login"><Button type='submit'>Cancel</Button></Link>
-                                <Button type='submit'>Sign Up</Button>
                             </Form>
+                            <Link to="/login"><Button type='submit'>Cancel</Button></Link>
+                            <Button type='submit' onClick={this.signUpCheck.bind(this)}>Sign Up</Button>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
