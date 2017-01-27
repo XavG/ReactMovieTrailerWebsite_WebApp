@@ -1,25 +1,26 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 import {Menu} from 'semantic-ui-react';
 
 class Header extends Component{
 
     addCheckToken() {
         return fetch('http://localhost:8080/api/checkToken ', {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify({
+                token: localStorage.getItem('webToken')
+            })
         })
             .then(function(res){ res.json().then(function(rez) {
                 if (rez.message == "USER_TOKEN_INVALIDITY") {
-                    console.log("Token error : ");
-                    console.log(rez.message);
+                    console.log("Token error : ", rez.message);
                 } else {
-                    console.log(rez.message);
-                    console.log("Go to add movie, logged in.");
+                    console.log("Logged in -> Going to ADD.");
                     hashHistory.push('/addMovie');
                 }
             })})

@@ -10,51 +10,53 @@ class MovieCard extends Component {
 
     editCheckToken() {
         return fetch('http://localhost:8080/api/checkToken ', {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify({
+                token: localStorage.getItem('webToken')
+            })
         })
             .then(function(res){ res.json().then(function(rez) {
                 if (rez.message == "USER_TOKEN_INVALIDITY") {
-                    console.log("Token error : ");
-                    console.log(rez.message);
+                    console.log("Token error : ", rez.message);
                 } else {
-                    console.log(rez.message);
-                    console.log("Go to edit, logged in.");
+                    console.log("Logged in -> Going to EDIT.");
                     hashHistory.push('/editMovie');
                 }
             })})
 
             .catch(function(res){
-                console.log("Cannot edit, error :");
-                console.log(res);
+                console.log("ERROR", res);
             })
     }
 
     deleteCheckToken() {
         return fetch('http://localhost:8080/api/checkToken ', {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify({
+                token: localStorage.getItem('webToken')
+            })
+
         })
             .then(function(res){ res.json().then(function(rez) {
                 if (rez.message == "USER_TOKEN_INVALIDITY") {
-                    console.log("Token error : ");
-                    console.log(rez.message);
+                    console.log("Token error : ", rez.message);
                 } else {
-                    console.log(rez.message);
-                    console.log("Deleting, logged in.");
+                    console.log("Logged in -> Going to DELETE.");
+                    // Need to link to server cf server side, server.js -> router.post('/removefilm'
                     hashHistory.push('/');
                 }
             })})
 
             .catch(function(res){
-                console.log("Cannot delete, error :");
-                console.log(res);
+                console.log("ERROR :", res);
             })
     }
 

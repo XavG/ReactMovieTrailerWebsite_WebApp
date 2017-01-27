@@ -3,12 +3,15 @@ import {connect} from 'react-redux';
 import ReactPlayer from 'react-player';
 import Header from '../header/headerContainer';
 import Footer from '../footer/footerContainer';
-import {Link} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 import { Form, Button, Grid } from 'semantic-ui-react'
 class MovieEdit extends Component {
 
     updateMovieInfo () {
-        console.log('Updated')
+        //Need to check inputs
+        //Need to link to server cf server side, server.js -> router.post('/updatefilms'
+        console.log('Updated');
+        hashHistory.push('/movieInfo');
     }
 
     infoChanged(event){

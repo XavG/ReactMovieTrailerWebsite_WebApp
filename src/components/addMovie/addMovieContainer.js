@@ -34,7 +34,8 @@ class AddMovie extends Component{
             let upload_date = 20199999;
             this.props.movies.push({id, title, genre, release_date, director, cast, image, trailer_link, uploader, upload_date});
             console.log('Movie Added');
-            this.cleanRefs();
+            //Need to link to server cf server side, server.js -> router.post('/addfilms'...
+            hashHistory.push('/');
         }
     }
 
