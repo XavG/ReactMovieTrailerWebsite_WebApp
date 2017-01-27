@@ -39,7 +39,7 @@
     Edit a movie's information.
     Delete a movie.
 
-#### Additional Project Information
+#### Additional Project Information and Limits
 
 There is some missing feedbacks for the users, buttons will redirect to other pages without telling user if action worked or not. **Use built-in browser console to get more info while going through the webapp.**
 
@@ -53,3 +53,5 @@ If he is, he will be redirected to the chosen functionality.
 Movie CRUDs have been created in the front-end and back-end but POST methods haven't been established between the server and the webapp. Submit buttons are fake but will still redirect you to the appropriate page once you click.
 
 #### Screenshots
+
+![enter image description here](https://s24.postimg.org/z5q0fr36d/DAMN.png)

@@ -1,18 +1,6 @@
 export default function(){
     return[
         {
-            id: 0,
-            title: 'Sample Movie',
-            genre: ['Other'],
-            release_date: 20180101,
-            director: 'Me',
-            cast: 'Me',
-            image: 'http://bit.ly/2jQwgaA',
-            upload_date: 20180100,
-            uploader: 'Mark',
-            trailer_link: 'https://www.youtube.com/watch?v=4F4qzPbcFiA'
-        },
-        {
             id: 1,
             title: 'La La Land',
             genre: ['Musical'],
@@ -116,7 +104,7 @@ export default function(){
             director: 'Walt Dohrn',
             cast: 'Anna Kendrick, Justin Timberlake, Zooey Deschanel',
             image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxNDc3OTcxMV5BMl5BanBnXkFtZTgwODk2NjAzOTE@._V1_SY1000_CR0,0,673,1000_AL_.jpg',
-            upload_date: 20161025,
+            upload_date: 20170122,
             uploader: 'Joe',
             trailer_link: 'https://www.youtube.com/watch?v=xyjm5VQ11TQ'
         },
@@ -128,7 +116,7 @@ export default function(){
             director: 'Barry Jenkins',
             cast: 'Mahershala Ali, Shariff Earp, Duan Sanderson',
             image: 'https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
-            upload_date: 20160202,
+            upload_date: 20170121,
             uploader: 'Tom',
             trailer_link: 'https://www.youtube.com/watch?v=9NJj12tJzqc'
         },
@@ -176,7 +164,7 @@ export default function(){
             director: 'John Hillcoat',
             cast: 'Casey Affleck, Kate Winslet, Norman Reedus, Chiwetel, Ejiofor',
             image: 'http://static.cinebel.be/img/movie/poster/full/1012817_fr_triple_nine_1454428219071.jpg',
-            upload_date: 20130317,
+            upload_date: 20170121,
             uploader: 'Edd',
             trailer_link: 'https://www.youtube.com/watch?v=wzyFNVbWPxI'
         },
@@ -188,7 +176,7 @@ export default function(){
             director: 'Nate Parker',
             cast: 'Nate Parker, Gabrielle Union, Aja Naomi King',
             image: 'https://upload.wikimedia.org/wikipedia/en/c/cd/The_Birth_of_a_Nation_(2016_film).png',
-            upload_date: 20161010,
+            upload_date: 20161008,
             uploader: 'Edd',
             trailer_link: 'https://www.youtube.com/watch?v=i18z1EQCoyg'
         },
@@ -236,7 +224,7 @@ export default function(){
             director: 'Conrad Vernon',
             cast: 'Seth Rogen, Jonah Hill, Kristen Wiig',
             image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSpbBTxHG6X59tPV520ZzmkWVt4wyMfeJOjbllri-DKTG-RwDNR',
-            upload_date: 20160930,
+            upload_date: 20160922,
             uploader: 'Sam',
             trailer_link: 'https://www.youtube.com/watch?v=9VoNgLnjzVg'
         },
