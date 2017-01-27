@@ -1,5 +1,7 @@
 # **React Movie Trailer Website** :movie_camera:
 
+![enter image description here](https://s24.postimg.org/z5q0fr36d/DAMN.png)
+
 ## **Execution**
     git clone
 
@@ -51,7 +53,3 @@ If he is not, he will stay on current page.
 If he is, he will be redirected to the chosen functionality.
 
 Movie CRUDs have been created in the front-end and back-end but POST methods haven't been established between the server and the webapp. Submit buttons are fake but will still redirect you to the appropriate page once you click.
-
-#### Screenshots
-
-![enter image description here](https://s24.postimg.org/z5q0fr36d/DAMN.png)
