@@ -1,6 +1,6 @@
 # **React Movie Trailer Website** :movie_camera:
 
-![enter image description here](https://s24.postimg.org/z5q0fr36d/DAMN.png)
+![enter image description here](https://s28.postimg.org/5zf0pzge5/DAMN.png)
 
 ## **Execution**
     git clone
