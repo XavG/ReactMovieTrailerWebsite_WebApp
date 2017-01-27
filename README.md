@@ -1,4 +1,4 @@
-# **React Movie Trailer Website**
+# **React Movie Trailer Website** :movie_camera:
 
 ## **Execution**
     git clone
