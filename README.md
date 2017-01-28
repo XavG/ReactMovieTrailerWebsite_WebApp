@@ -1,4 +1,4 @@
-# **React Movie Trailer Website** :movie_camera:
+# **React Movie Trailer Website : WebApp**
 
 ![enter image description here](https://s28.postimg.org/5zf0pzge5/DAMN.png)
 
