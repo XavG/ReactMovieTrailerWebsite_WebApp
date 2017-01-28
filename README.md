@@ -4,6 +4,7 @@
 
 ## **Execution**
     git clone
+    cd ReactMovieTrailerWebsite_WebApp
 
 #### WebApp
     npm install
